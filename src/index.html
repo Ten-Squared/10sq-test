@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TenSQ Tailwind Test</title>
+</head>
+
+<body x-data="{
+  currentBg: 'bg-black'
+}">
+
+  <main x-data :class="currentBg" class="transition-colors duration-500">
+
+    <!-- Hero -->
+
+    <section class="min-h-screen hero-bg text-white flex items-center justify-center overflow-hidden relative"
+      x-intersect.half="currentBg = `bg-black`">
+      <h1 class="text-4xl font-bold">
+        10SQ Tailwind Test
+      </h1>
+    </section>
+
+    <!-- Grid -->
+
+    <section x-intersect.half="currentBg = `bg-red-500`" class="h-screen p-8 grid lg:grid-cols-2 gap-8">
+
+
+    </section>
+
+    <!-- Build something cool -->
+
+
+    <section class="h-screen flex items-center justify-center font-mono" x-intersect.half="addConfetti()">
+      
+      <h2 class="text-4xl font-bold text-center mx-8">
+        Build something cool
+      </h2>
+
+    </section>
+
+
+  </main>
+
+</body>
+
+</html>
